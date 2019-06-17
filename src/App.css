@@ -1,33 +1,409 @@
-.App {
+body {
+  background-color: #F8FAFF
+}
+
+.add-employees {
+  text-align: right;
+  position: relative;
+}
+
+.calculate-pay {
+  text-align: left;
+}
+
+.add-employees a {
+  color: #3FAFD7!important;
+  font-family: 'Lato';
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 18px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.add-employee a:hover,
+.calculate-pay a:hover {
+  text-decoration: none;
+}
+
+.calculate-pay a {
+  color: #99CA2F!important;
+  font-family: 'Lato';
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 18px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.add-employees::after {
+  content:'';
+  height: 18px;
+  width: 2px;
+  background-color: #CAD2DE;
+  position: absolute;
+  right: 0;
+}
+
+.california-calc {
+  border: 1px solid #E9ECF6;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  box-shadow: -2px 2px 10px 0 rgba(0,0,0,0.12);
+  margin-bottom: 3em;
+}
+
+.california-calc:last-child{
+  margin-bottom: 0;
+}
+
+.california-calc .h3 {
+  color: #3C4754;
+  font-family: 'Lato';
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: normal;
+}
+
+.row-pad-3 {
+  padding: 3rem;
+}
+
+.date-header {
+  color: #3C4754;
+  font-family: 'Lato';
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.calc-input {
+  border: 1px solid #CAD2DE;
+  border-radius: 4px;
+  background-color: rgba(216,216,216,0);
+  width: 90%;
+  padding: 10px;
+  color: #536171;
+  font-family: 'Lato';
+  font-size: 16px;
+  line-height: 19px;
+  height: 39px;
+}
+
+.my-flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+}
+
+.my-flex-col {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.h3-light-grey {
+  color: #8A9BAE;
+  font-family: 'Lato';
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.time-ranges input[type="time"]::-webkit-inner-spin-button,
+.time-ranges input[type="time"]::-webkit-outer-spin-button,
+input[type="time"]::-webkit-outer-spin-button,
+input[type="date"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.time-ranges input[type="time"]::-webkit-clear-button,
+input[type="date"]::-webkit-clear-button {
+    display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.time-ranges input {
+  text-align: center
+}
+
+.hours-result {
+  color: #8A9BAE;
+  font-family:
+  Lato;	font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+}
+
+.margin-8px {
+  margin-bottom: 8px;
+}
+
+.margin-1 {
+  margin-bottom: 1rem;
+}
+
+.total-cont {
+  	background-color: #F2F4FA;
+    text-align: center;
+    border-top: 1px solid #E9ECF6;
+}
+
+.calendar-input,
+.dollar-input {
+  position: relative;
+}
+
+.dollar-input {
+  width:100%;
+}
+
+.calendar-input::after {
+  content: '\f508';
+  color: #8A9BAE;
+  font-family: dashicons;
+  font-size: 18px;
+  line-height: 20px;
+  position:absolute;
+  right: 10px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: transparent;
+  background: none;
+  z-index: 1;
+}
+
+.dollar-input::before {
+  content: '$';
+  color: #8A9BAE;
+  font-family: 'Lato';
+  font-size: 18px;
+  line-height: 20px;
+  position: absolute;
+  top: 9px;
+  left: 7px;
+}
+
+.dollar-input .calc-input {
+      padding: 10px 16px 10px 21px;
+}
+
+#california-calculator .h2 {
+  color: #3C4754;
+  font-family: 'Lato';
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.pay-result {
+  color: #CAD2DE;
+  font-family: 'Lato';
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.pay-result.bold{
+  color: #3C4754;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+.margin-top-3 {
+  margin-top: 3rem;
+}
+
+.pay-head {
+  margin-bottom: 1em;
+}
+
+.california-container .icons{
+  text-align: right;
+}
+
+.california-container .icons a {
+  color: #CAD2DE;
+  font-size: 20px;
+  line-height: 22px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left:12px;
+}
+
+.california-container .icons a:hover {
+  text-decoration: none;
+}
+
+.input-header {
+  margin-bottom: 8px;
+}
+
+.my-flex-col .h3 {
+  margin: 0;
+}
+
+
+.my-flex-col.heading {
+  text-align: left;
+  flex: 0 0 6%;
+}
+
+.date-margin {
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.open .row{
+  opacity: 1;
+  height: 46px;
+  webkit-transition:height, 0.2s linear;
+  -moz-transition: height, 0.2s linear;
+  -ms-transition: height, 0.2s linear;
+  -o-transition: height, 0.2s linear;
+  transition: height, 0.2s linear;
+}
+
+.open.col-sm-12 {
+  padding: 0;
+}
+
+.open.close .row{
+  height: 0;
+  opacity: 0;
+  webkit-transition:height, 0.2s linear;
+  -moz-transition: height, 0.2s linear;
+  -ms-transition: height, 0.2s linear;
+  -o-transition: height, 0.2s linear;
+  transition: height, 0.2s linear;
+}
+
+.open.close .date-margin {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.open-void {
+  height:auto!important;
+}
+
+.m-row-fix {
+  width:100%;
+}
+
+@media only screen and (max-width: 991px) {
+  .calc-input {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .my-flex-row {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    text-align: center;
+    flex: 0 0 100%;
+    text-align: center;
+    width: auto;
+  }
+
+  .my-flex-col {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+    align-items: center;
+    min-height: 46px;
+    max-height: 46px;
+    padding-bottom: 10px;
+  }
+
+  .calc-input {
+    font-size: 14px;
+  }
+
+  .pay-head {
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .pay-total {
+    text-align: right;
+  }
+
+  .small-input .calc-input{
+    width: 95%;
+  }
+
+  .small-input.left {
+    text-align: left;
+  }
+
+  .small-input.right {
+    text-align: right;
+  }
+
+  .col-xs-3.margin-8px {
+    margin: 0;
+  }
+
+  .input-header {
+    margin-top: 16px;
+  }
+
+  .results-marg-20 {
+    margin-bottom: 20px;
+  }
+
+  .row-pad-3.total-cont {
+    padding-bottom: 1em;
+  }
+
+  .date-margin {
+    margin: 0;
+  }
+
+  .bottom-margin {
+    margin-top: 16px;
+  }
+
+  .open .row {
+    height: auto;
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+}
+
+@media only screen and (max-width: 575px) {
+
+  .time-ranges .calc-input {
+    padding: 0;
+  }
+
+}
+
+@media only screen and (max-width: 360px) {
+  .row-pad-3 {
+    padding: 1rem;
+  }
+
+  .row-pad-3.total-cont {
+    padding: 2em 1em;
+    padding-bottom: 1em;
+  }
+
+  .bottom-margin {
+    margin-bottom:23px;
+  }
+
+  .open .col-xs-3 {
+    padding: 0;
   }
 }
